@@ -14,24 +14,26 @@ export default function CompanyDashboard() {
   }, []);
 
   return (
-    <div className="bg-background">
+    <div className="bg-background min-h-screen">
       {/* Header */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.05),transparent_50%)]" />
-        <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <h1 className="text-3xl font-bold mb-2">Welcome back, {user?.username || "Company"}! 🏢</h1>
-                <p className="text-white">Your recruitment dashboard</p>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 dark:from-purple-950/20 dark:via-indigo-950/20 dark:to-blue-950/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(147,51,234,0.1),transparent_50%)]" />
+        
+        <div className="relative">
+          <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h1 className="text-4xl font-bold mb-2">Welcome back, {user?.username || "Company"}! 🏢</h1>
+                  <p className="text-white/90 text-lg">Your recruitment command center</p>
+                </div>
+                <button className="px-6 py-3 bg-white text-purple-600 font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200">
+                  Post New Job
+                </button>
               </div>
-              <button className="px-6 py-3 bg-white text-indigo-800 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-sm">
-                Post New Job
-              </button>
             </div>
           </div>
-        </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
           {/* Stats Grid */}
@@ -209,15 +211,15 @@ export default function CompanyDashboard() {
 
 function StatCard({ icon, title, value, subtitle, color }: any) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow">
+    <div className="group bg-white dark:bg-black rounded-2xl border border-black/10 dark:border-white/10 shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <div className="flex items-start justify-between mb-4">
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center text-2xl shadow-sm`}>
+        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center text-2xl shadow-lg`}>
           {icon}
         </div>
       </div>
-      <div className="text-3xl font-bold mb-1 text-black">{value}</div>
-      <div className="text-sm text-gray-900 font-bold">{title}</div>
-      <div className="text-xs text-gray-900 font-semibold mt-1">{subtitle}</div>
+      <div className="text-3xl font-bold mb-1 text-foreground">{value}</div>
+      <div className="text-sm text-foreground font-semibold">{title}</div>
+      <div className="text-xs text-foreground/60 font-medium mt-1">{subtitle}</div>
     </div>
   );
 }

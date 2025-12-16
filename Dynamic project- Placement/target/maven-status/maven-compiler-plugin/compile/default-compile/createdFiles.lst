@@ -1,6 +1,7 @@
 com\spms\placement\service\impl\CompanyServiceImpl.class
 com\spms\placement\mapper\ApplicationMapper.class
 com\spms\placement\service\AdminService.class
+com\spms\placement\mapper\UserMapper.class
 com\spms\placement\entity\Role.class
 com\spms\placement\mapper\StudentMapper.class
 com\spms\placement\dto\response\StudentProfileResponse.class
@@ -31,6 +32,7 @@ com\spms\placement\repository\InterviewRepository.class
 com\spms\placement\mapper\CompanyMapper.class
 com\spms\placement\dto\response\CompanyResponse$CompanyResponseBuilder.class
 com\spms\placement\repository\NotificationRepository.class
+com\spms\placement\config\DataInitializer.class
 com\spms\placement\dto\request\LoginRequest.class
 com\spms\placement\service\impl\StudentServiceImpl.class
 com\spms\placement\controller\CompanyController.class

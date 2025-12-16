@@ -351,13 +351,15 @@ export default function ReportsPage() {
   ];
 
   return (
-    <div className="bg-background">
+    <>
+    <div className="bg-background min-h-screen">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-gray-50/30 to-zinc-50/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.1),transparent_50%)]" />
         
         <div className="relative">
           {/* Header */}
-          <div className="bg-gradient-to-r from-slate-700 via-gray-700 to-zinc-700 text-white">
+          <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
@@ -504,9 +506,10 @@ export default function ReportsPage() {
           </div>
         </div>
       </section>
+    </div>
 
-      {/* Email Modal */}
-      {showEmailModal && (
+    {/* Email Modal */}
+    {showEmailModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => setShowEmailModal(false)}>
           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4" onClick={(e) => e.stopPropagation()}>
             <h3 className="text-2xl font-bold mb-4 text-gray-900">Email Report</h3>
@@ -535,7 +538,7 @@ export default function ReportsPage() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 

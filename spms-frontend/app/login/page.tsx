@@ -17,6 +17,11 @@ export default function LoginPage() {
     setIsLoading(true);
 
     try {
+      console.log("Attempting login with email:", email);
+      console.log("Email length:", email.length);
+      console.log("Password length:", password.length);
+      console.log("Request body:", JSON.stringify({ email, password }));
+      
       const response = await fetch("http://localhost:8080/api/auth/login", {
         method: "POST",
         headers: {
@@ -25,11 +30,25 @@ export default function LoginPage() {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+      console.log("Response status:", response.status);
 
       if (!response.ok) {
-        throw new Error(data.message || "Login failed");
+        const errorText = await response.text();
+        console.error("Error response:", errorText);
+        
+        let errorMessage = "Login failed";
+        try {
+          const errorData = JSON.parse(errorText);
+          errorMessage = errorData.message || errorData.error || errorMessage;
+        } catch {
+          errorMessage = errorText || errorMessage;
+        }
+        
+        throw new Error(errorMessage);
       }
+
+      const data = await response.json();
+      console.log("Login successful:", data);
 
       // Store token and user info in localStorage
       localStorage.setItem("token", data.token);

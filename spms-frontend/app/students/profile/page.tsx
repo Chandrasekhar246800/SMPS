@@ -131,14 +131,14 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="bg-background">
+    <div className="bg-background min-h-screen">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.1),transparent_50%)]" />
         
         <div className="relative">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 text-white">
+          <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
               <div className="flex items-center justify-between">
                 <div>

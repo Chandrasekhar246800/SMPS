@@ -73,9 +73,9 @@ export default function Footer() {
                 </>
               ) : (
                 <>
-                  <li><Link href="/students" className="hover:text-foreground transition-colors">Students</Link></li>
-                  <li><Link href="/company" className="hover:text-foreground transition-colors">Recruiters</Link></li>
-                  <li><Link href="/admin" className="hover:text-foreground transition-colors">Admin</Link></li>
+                  <li><Link href="/students-info" className="hover:text-foreground transition-colors">Students</Link></li>
+                  <li><Link href="/company-info" className="hover:text-foreground transition-colors">Recruiters</Link></li>
+                  <li><Link href="/admin-info" className="hover:text-foreground transition-colors">Admin</Link></li>
                 </>
               )}
             </ul>

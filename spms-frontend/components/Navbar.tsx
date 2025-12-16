@@ -102,9 +102,9 @@ export default function Navbar() {
               ) : (
                 // Public navigation
                 <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
-                  <NavLink href="/students">Students</NavLink>
-                  <NavLink href="/recruiters">Recruiters</NavLink>
-                  <NavLink href="/admin">Admin</NavLink>
+                  <NavLink href="/students-info">Students</NavLink>
+                  <NavLink href="/recruiters-info">Recruiters</NavLink>
+                  <NavLink href="/admin-info">Admin</NavLink>
                 </nav>
               )}
 
